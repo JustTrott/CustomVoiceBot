@@ -36,12 +36,10 @@ class CustomChannel(commands.Cog):
             new_channel = await destCategory.create_voice_channel(name = f'{member.display_name}\'s custom channel', overwrites=overwrites)
             await member.edit(voice_channel = new_channel)
             self.createdChannels.append(new_channel.id)
-        print(self.createdChannels)
 
     @commands.Cog.listener()
     async def on_private_channel_delete(channel):
         if channel.id in self.createdChannels:
             self.createdChannels.remove(channel.id)
-        print(self.createdChannels)
 
 
