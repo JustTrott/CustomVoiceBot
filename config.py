@@ -33,7 +33,7 @@ class Config:
 
 
     @property
-    def customChannelID(self):
+    def custom_channel_id(self):
         return int(self.cp[discordGroup][CustomChannelKey])
 
 

@@ -21,7 +21,6 @@ async def on_command_error(ctx, error):
 async def on_ready():
     await client.change_presence(activity = discord.Activity(type = discord.ActivityType.watching, name = 'Your beatiful face'))
     print(f'{client.user.name} is ready.')
-    customChannelID = config.customChannelID
 
 startup_extensions = ['CustomChannel']
 

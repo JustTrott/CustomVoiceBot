@@ -11,7 +11,7 @@ class CustomChannel(commands.Cog):
         self.bot = bot
         config = Config()
         self.createdChannels = []
-        self.customChannelID = config.customChannelID
+        self.custom_channel_id = config.custom_channel_id
 
 
     @commands.Cog.listener()
@@ -24,7 +24,7 @@ class CustomChannel(commands.Cog):
             self.createdChannels.remove(before.channel.id)
 
 
-        if after.channel is not None and after.channel.id == self.customChannelID:
+        if after.channel is not None and after.channel.id == self.custom_channel_id:
 
             if after.channel.category is not None:
                 destCategory = after.channel.category
